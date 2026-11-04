@@ -342,6 +342,78 @@ zapisano w `2026-10-28/`, z zachowaniem nazw i kolejności:
   wcześniejszy fragment nie transkrybowano ponownie. Daty pozostają
   wyłącznie w dokumentacji materiałów i ścieżkach.
 
+## Wykład 8: materiały otrzymane 4 listopada 2026 r.
+
+Niezmienione kopie jedenastu zdjęć z `C:\Users\szymo\AppData\Local\Temp\`
+zapisano w `2026-11-04/`, z zachowaniem nazw i kolejności:
+
+- `IMG_7078.jpeg` - przypomnienie kryteriów mierzalności i twierdzenia
+  o działaniach, początek dalszego dowodu: mierzalność sumy przez gęstość Q;
+  warunek dziedziny ilorazu.
+- `IMG_7079.jpeg` - dokończenie sumy jako przeliczalnej sumy przekrojów,
+  różnica, sprowadzenie iloczynu do kwadratów i przypadek a<0.
+- `IMG_7080.jpeg` - kwadrat dla a>=0, iloraz przez odwrotność
+  i mierzalność dziedziny {g!=0}.
+- `IMG_7081.jpeg` - mierzalność minimum, maksimum, infimum, supremum,
+  granic dolnej i górnej oraz granicy punktowej; schemat min i max.
+- `IMG_7082.jpeg` - wzory na granice dolną i górną, supremum przez infimum;
+  rozróżnienie mierzalności względem L i względem B(R).
+- `IMG_7083.jpeg` - definicja funkcji borelowskiej i uwagi o równoważnych
+  kryteriach, twierdzenie i dowód o złożeniu z funkcją borelowską.
+- `IMG_7084.jpeg` - ciągłość implikuje borelowskość; rysunek przeciwobrazu
+  i definicja równości prawie wszędzie.
+- `IMG_7085.jpeg` - funkcja Dirichleta, porównanie miary Lebesgue'a
+  z delta_0 oraz twierdzenie o relacji równoważności i przechodniość.
+- `IMG_7086.jpeg` - własność zachodząca prawie wszędzie, nagłówek
+  „Całka Lebesgue'a”, schematy prostokątów i mierzalność 1_A.
+- `IMG_7087.jpeg` - funkcja prosta, postać kanoniczna, rozłączny podział
+  na poziomice i dwa zapisy przykładu z wartościami 2 oraz 1.
+- `IMG_7088.jpeg` - mierzalność funkcji prostej a mierzalność poziomic,
+  pierwszy etap definicji całki i całka funkcji charakterystycznej.
+
+### Zakres i decyzje redakcyjne
+
+- Znacznik wykładu 8 umieszczono po dowodzie dla f+c i cf, przed dalszym
+  ciągiem dowodu twierdzenia 3.3. Kryteriów mierzalności i twierdzenia
+  przypomnianych na pierwszych dwóch zdjęciach nie dublowano.
+- Dalsza treść pozostaje w rozdziale 3, w sekcjach 3.4–3.6.
+  Rozdział 4 zaczyna się w miejscu nagłówka z IMG_7086. W obu wariantach
+  zachowano niezależne liczniki elementów ciągłe przez cały rozdział.
+- Rozpisano wybór liczby wymiernej między a-g(x) a f(x). W iloczynie
+  zachowano czynnik 1/2 i rozróżnienie a<0 oraz a>=0 dla kwadratu.
+  Mierzalność 1/g, pozostawioną na tablicy jako ćwiczenie, uzasadniono
+  krótkim rozpatrzeniem a>0, a=0 i a<0. Wszystkie zbiory są w dziedzinie
+  D={g!=0}, z sigma-ciałem śladowym.
+- Granice z kreskami zastąpiono standardowymi liminf i limsup,
+  zachowując ich punktowe definicje przez kresy ogonów ciągu.
+  Dopuszczono wartości rozszerzone, ponieważ kresy ciągu funkcji
+  rzeczywistych mogą być nieskończone.
+- Zachowano rozróżnienie mierzalności względem L i borelowskości.
+  W złożeniu funkcja zewnętrzna jest borelowska, a wewnętrzna mierzalna.
+  Krótko rozwinięto uzasadnienie dla funkcji ciągłej z rysunku przeciwobrazu.
+- W przykładzie Dirichleta zapisano funkcję zerową jako O, a funkcję
+  Dirichleta jako D, aby odróżnić oznaczenia. Zachowano wszystkie trzy
+  porównania: O=D lambda-p.w., brak równości delta_0-p.w. i 1=D delta_0-p.w.
+  Dowód przechodniości rozwija rozbicie zbioru różnic z tablicy.
+- Uzasadniono mierzalność zbiorów porównania także dla funkcji o wartościach
+  rozszerzonych, wskazanych w nawiasie na IMG_7084. Ogólna własność P
+  zachodzi na mierzalnym zbiorze E o dopełnieniu miary zero.
+- Funkcja prosta oznacza funkcję o skończonym zbiorze wartości;
+  mierzalność jest osobnym warunkiem, zgodnie z ostatnim twierdzeniem.
+  W przykładzie z IMG_7087 doprecyzowano dziedzinę R i dopisano zerową
+  poziomicę poza [0,2] w pełnej postaci kanonicznej. Równoważny zapis
+  1_[0,2]+1_[0,1] odtwarza drugi zapis z tablicy.
+- Dowód kryterium mierzalności funkcji prostej, pozostawiony jako ćwiczenie,
+  rozwinięto przez przeciwobrazy singletonów i skończone kombinacje 1_E.
+- W definicji całki zachowano sumę c_i*mu(E_i) z postaci kanonicznej.
+  Doprecyzowano jej sens: suma musi być określona; dla funkcji nieujemnych
+  jest tak zawsze, z konwencją 0*infinity=0. Przy wartościach obu znaków
+  wykluczono infinity+(-infinity). Ostatnia tablica nie podaje ograniczenia
+  znaków współczynników, więc nie przyjęto bezwarunkowej określoności sumy.
+- Odtworzono główne schematy wykresów w osobnych plikach TikZ.
+  Materiał kończy się równością całki 1_E z mu(E); nie dodano dalszych
+  etapów konstrukcji całki ani twierdzeń spoza zdjęć.
+
 ## Okładka
 
 Zatwierdzona ilustracja znajduje się w `grafika/okladka-kreskowkowa.png`.

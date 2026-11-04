@@ -1,0 +1,147 @@
+\chapter{Całka Lebesgue'a}
+\label{chap:calka-lebesguea}
+
+W tym rozdziale $(X,\mathcal{F},\mu)$ jest przestrzenią z miarą.
+Schematy z tablicy przedstawiają zastępowanie funkcji prostokątami:
+przez podział dziedziny oraz przez podział wartości funkcji
+(rysunek~\ref{fig:calka-podzialy}).
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.96\textwidth]{calka-podzialy.pdf}
+  \caption{Schematy podziału dziedziny i podziału wartości funkcji.}
+  \label{fig:calka-podzialy}
+\end{figure}
+
+\section{Funkcje charakterystyczne}
+\label{sec:funkcje-charakterystyczne}
+
+Dla $A\subseteq X$ funkcję charakterystyczną zbioru $A$ oznaczamy
+przez $\mathbf{1}_A$:
+\[
+  \mathbf{1}_A(x)=
+  \begin{cases}
+    1, & x\in A,\\
+    0, & x\notin A.
+  \end{cases}
+\]
+
+\begin{fakt}
+\label{fakt:mierzalnosc-charakterystycznej}
+Funkcja $\mathbf{1}_A$ jest mierzalna wtedy i tylko wtedy,
+gdy zbiór $A$ jest mierzalny, czyli $A\in\mathcal{F}$.
+\end{fakt}
+
+\begin{proof}
+Dla $a\in\R$ mamy
+\[
+  \{x:\mathbf{1}_A(x)>a\}
+  =\begin{cases}
+    X, & a<0,\\
+    A, & 0\leq a<1,\\
+    \varnothing, & a\geq1.
+  \end{cases}
+\]
+Jeżeli $A\in\mathcal{F}$, wszystkie te zbiory są mierzalne.
+Odwrotnie, jeżeli $\mathbf{1}_A$ jest mierzalna, to biorąc $a=0$,
+otrzymujemy $A=\{x:\mathbf{1}_A(x)>0\}\in\mathcal{F}$.
+\end{proof}
+
+\section{Funkcje proste i postać kanoniczna}
+\label{sec:funkcje-proste}
+
+\begin{definicja}[Funkcja prosta]
+\label{def:funkcja-prosta}
+Funkcję $f\colon X\to\R$ nazywamy prostą, jeżeli przyjmuje
+tylko skończenie wiele wartości.
+\end{definicja}
+
+\begin{definicja}[Postać kanoniczna]
+\label{def:postac-kanoniczna}
+Niech $f(X)=\{c_1,\ldots,c_r\}$, gdzie wartości $c_i$ są parami różne.
+Połóżmy $E_i=\{x\in X:f(x)=c_i\}$. Wtedy
+\begin{equation}
+  f(x)=\sum_{i=1}^{r}c_i\mathbf{1}_{E_i}(x).
+  \label{eq:postac-kanoniczna-prostej}
+\end{equation}
+Zapis ten nazywamy postacią kanoniczną funkcji prostej.
+Zbiory $E_i$ są niepuste, parami rozłączne i
+$\bigcup_{i=1}^{r}E_i=X$.
+\end{definicja}
+
+\begin{przyklad}[Dwa zapisy tej samej funkcji]
+\label{prz:prosta-dwa-zapisy}
+Funkcję z tablicy można zapisać jako
+\[
+  f=2\mathbf{1}_{[0,1]}+\mathbf{1}_{(1,2]}
+    =\mathbf{1}_{[0,2]}+\mathbf{1}_{[0,1]}.
+\]
+Oba zapisy dają wartość $2$ na $[0,1]$, wartość $1$ na $(1,2]$
+i wartość $0$ poza $[0,2]$.
+W drugim zapisie zbiory $[0,2]$ i $[0,1]$ nie są rozłączne.
+Pełna postać kanoniczna dla dziedziny $\R$ to
+\[
+  f=0\mathbf{1}_{\R\setminus[0,2]}
+    +\mathbf{1}_{(1,2]}+2\mathbf{1}_{[0,1]}.
+\]
+Wykres przedstawia rysunek~\ref{fig:funkcje-proste} po prawej.
+\end{przyklad}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.96\textwidth]{funkcje-proste.pdf}
+  \caption{Funkcja charakterystyczna przedziału oraz funkcja prosta z przykładu~\ref{prz:prosta-dwa-zapisy}.}
+  \label{fig:funkcje-proste}
+\end{figure}
+
+\begin{twierdzenie}
+\label{tw:mierzalnosc-prostej}
+Jeżeli funkcja prosta $f$ ma postać kanoniczną
+\eqref{eq:postac-kanoniczna-prostej}, to jest mierzalna wtedy i tylko
+wtedy, gdy wszystkie zbiory $E_1,\ldots,E_r$ należą do $\mathcal{F}$.
+\end{twierdzenie}
+
+\begin{proof}
+Jeżeli $f$ jest mierzalna, to
+$E_i=f^{-1}(\{c_i\})\in\mathcal{F}$.
+Odwrotnie, jeżeli wszystkie $E_i$ są mierzalne, to
+funkcje $\mathbf{1}_{E_i}$ są mierzalne na mocy
+faktu~\ref{fakt:mierzalnosc-charakterystycznej}.
+Ich skończona kombinacja liniowa jest mierzalna.
+\end{proof}
+
+\section{Całka funkcji prostej: etap pierwszy}
+\label{sec:calka-prostej-etap-pierwszy}
+
+\begin{definicja}[Całka funkcji prostej]
+\label{def:calka-prostej}
+Dla mierzalnej funkcji prostej w postaci kanonicznej
+\eqref{eq:postac-kanoniczna-prostej} definiujemy
+\begin{equation}
+  \int_X f\,d\mu=\sum_{i=1}^{r}c_i\mu(E_i),
+  \label{eq:calka-prostej}
+\end{equation}
+o ile suma po prawej stronie jest określona.
+W szczególności dla funkcji nieujemnej jest ona zawsze określona
+i może być równa $+\infty$. Stosujemy konwencję $0\cdot(+\infty)=0$.
+\end{definicja}
+
+\begin{uwaga}
+Jeżeli funkcja przyjmuje wartości obu znaków, zapis
+\eqref{eq:calka-prostej} wymaga wykluczenia nieokreślonej sumy
+$+\infty+(-\infty)$.
+\end{uwaga}
+
+\begin{wniosek}
+\label{wn:calka-charakterystycznej}
+Dla każdego zbioru $E\in\mathcal{F}$ zachodzi
+\[
+  \int_X\mathbf{1}_E\,d\mu=\mu(E).
+\]
+\end{wniosek}
+
+\begin{proof}
+W postaci kanonicznej występuje wartość $1$ na $E$ i wartość $0$
+na $E^c$; puste poziomice pomijamy. Stąd całka jest równa
+$1\cdot\mu(E)+0\cdot\mu(E^c)=\mu(E)$.
+\end{proof}

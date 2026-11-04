@@ -33,6 +33,21 @@ kompilowane przez `kompiluj.ps1` do plików PDF w tym samym folderze.
   zgodnie z doprecyzowaniem użytkownika. Wykres Cantora odtworzono
   za pomocą skończonego przybliżenia; nie dodano konstrukcji miary.
 
+## Wykład 8
+
+- `funkcje-minimum-maksimum.tex` - punktowe minimum i maksimum dwóch
+  funkcji z IMG_7081; ciemniejsza krzywa oznacza maksimum, jaśniejsza minimum.
+- `funkcja-ciagla-przeciwobraz.tex` - schemat otwartego przeciwobrazu
+  półprostej przez funkcję ciągłą z IMG_7084.
+- `calka-podzialy.tex` - schematy prostokątów z IMG_7086: podział
+  dziedziny oraz podział wartości funkcji.
+- `funkcje-proste.tex` - funkcja charakterystyczna z IMG_7086
+  oraz przykład 2*1_[0,1]+1_(1,2] z IMG_7087. Poziome fragmenty
+  i oznaczenia końców określają wartości funkcji w punktach 0, 1 i 2.
+
+Wykresy są odtworzeniami schematów z tablicy. Pomocnicze krzywe
+nie wprowadzają dodatkowych przykładów z zadanymi wzorami.
+
 ## Okładka
 
 - `okladka-kreskowkowa.png` - zatwierdzona ilustracja: postać patrząca

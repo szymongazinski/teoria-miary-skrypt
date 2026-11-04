@@ -29,6 +29,12 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
   Zachowuj normalizację dystrybuant z tablicy: granica w zerze z lewej
   wynosi zero, a F_mu(0)=mu({0}); nie zastępuj jej konwencją probabilistyczną.
   Materiały kończą się dowodem mierzalności f+c i cf, po przypadku c=0.
+- Wykład 8 zaczyna się od kontynuacji dowodu twierdzenia o działaniach
+  w sekcji 3.3: suma, różnica, iloczyn i iloraz. Dalej obejmuje sekcje
+  3.4–3.6: kresy i granice, funkcje borelowskie i złożenia, prawie wszędzie.
+  Nagłówek „Całka Lebesgue'a” z IMG_7086 rozpoczyna rozdział 4.
+  Wykład kończy się definicją całki mierzalnej funkcji prostej w postaci
+  kanonicznej i równością całki funkcji charakterystycznej z miarą zbioru.
 - W obu wariantach umieszczaj nienumerowany znacznik „Limbo” przed sekcją
   2.8 i drugi, o tym samym brzmieniu, po dowodzie braku przeliczalnej
   addytywności lambda* na P(R). Oba mają własne wpisy w spisie treści.

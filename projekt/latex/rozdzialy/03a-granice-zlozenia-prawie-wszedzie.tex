@@ -1,0 +1,247 @@
+\poczatekwykladu{8}
+
+\begin{proof}[Dalszy ciąg dowodu twierdzenia~\ref{tw:dzialania-na-mierzalnych}]
+\emph{Suma.} Ustalmy $a\in\R$. Z gęstości liczb wymiernych wynika,
+że $f(x)>a-g(x)$ wtedy i tylko wtedy, gdy istnieje $q\in\mathbb{Q}$
+takie, że $a-g(x)<q<f(x)$. Zatem
+\begin{align*}
+  \{x\in X:f(x)+g(x)>a\}
+    &=\bigcup_{q\in\mathbb{Q}}
+      \bigl(\{x\in X:f(x)>q\}\cap\{x\in X:g(x)>a-q\}\bigr).
+\end{align*}
+Zbiory w nawiasach należą do $\mathcal{F}$, a suma jest przeliczalna,
+więc $f+g$ jest mierzalna.
+
+\emph{Różnica.} Funkcja $-g=(-1)g$ jest mierzalna na mocy
+udowodnionej części twierdzenia. Stąd $f-g=f+(-g)$ jest mierzalna.
+
+\emph{Iloczyn.} Korzystamy z tożsamości
+\[
+  fg=\frac{(f+g)^2-f^2-g^2}{2}.
+\]
+Wystarczy więc wykazać, że kwadrat funkcji mierzalnej jest mierzalny.
+Dla dowolnej takiej funkcji $h$ mamy
+\[
+  \{x\in X:h(x)^2>a\}
+  =\begin{cases}
+    X, & a<0,\\
+    \{x:h(x)>\sqrt a\}\cup\{x:h(x)<-\sqrt a\}, & a\geq0.
+  \end{cases}
+\]
+W obu przypadkach otrzymujemy zbiór mierzalny.
+
+\emph{Iloraz.} Jego dziedzina
+\[
+  D=\{x\in X:g(x)\neq0\}
+   =\{x:g(x)>0\}\cup\{x:g(x)<0\}
+\]
+jest mierzalna. Wystarczy sprawdzić mierzalność $1/g$ na $D$,
+a następnie zastosować wynik o iloczynie do $f\cdot(1/g)$.
+Ponieważ funkcja $t\mapsto1/t$ jest malejąca na każdej z półprostych,
+dla $a\in\R$ otrzymujemy
+\[
+  \{x\in D:1/g(x)>a\}
+  =\begin{cases}
+    \{x:0<g(x)<1/a\}, & a>0,\\
+    \{x:g(x)>0\}, & a=0,\\
+    \{x:g(x)>0\}\cup\{x:g(x)<1/a\}, & a<0.
+  \end{cases}
+\]
+Każdy z tych zbiorów należy do $\mathcal{F}|_D$.
+\end{proof}
+
+\section{Kresy i granice funkcji mierzalnych}
+\label{sec:kresy-granice-mierzalnych}
+
+\begin{twierdzenie}
+\label{tw:kresy-granice-mierzalnych}
+Niech $(f_n)$ będzie ciągiem funkcji mierzalnych
+$f_n\colon X\to\Rbar$. Wtedy funkcje
+\[
+  \min_{1\leq n\leq N}f_n,\qquad
+  \max_{1\leq n\leq N}f_n,\qquad
+  \inf_{n\in\N}f_n,\qquad
+  \sup_{n\in\N}f_n
+\]
+są mierzalne. Mierzalne są również
+\[
+  \liminf_{n\to\infty}f_n,\qquad
+  \limsup_{n\to\infty}f_n
+\]
+oraz granica punktowa $\lim_{n\to\infty}f_n$, jeżeli istnieje
+w każdym punkcie $X$.
+Wszystkie działania rozumiemy punktowo, na przykład
+\[
+  \left(\inf_{n\in\N}f_n\right)(x)=\inf_{n\in\N}f_n(x).
+\]
+\end{twierdzenie}
+
+\begin{proof}
+Dla $a\in\R$ mamy
+\[
+  \left\{x:\min_{1\leq n\leq N}f_n(x)<a\right\}
+  =\bigcup_{n=1}^{N}\{x:f_n(x)<a\}\in\mathcal{F}.
+\]
+Tak samo
+\[
+  \left\{x:\inf_{n\in\N}f_n(x)<a\right\}
+  =\bigcup_{n=1}^{\infty}\{x:f_n(x)<a\}\in\mathcal{F},
+\]
+co dowodzi mierzalności infimum. Z tożsamości
+\[
+  \sup_{n\in\N}f_n=-\inf_{n\in\N}(-f_n)
+\]
+wynika mierzalność supremum; analogicznie otrzymujemy wynik dla maksimum
+skończenie wielu funkcji.
+Wreszcie korzystamy z punktowych wzorów
+\begin{align*}
+  \liminf_{n\to\infty}f_n
+    &=\sup_{N\in\N}\left(\inf_{n\geq N}f_n\right),\\
+  \limsup_{n\to\infty}f_n
+    &=\inf_{N\in\N}\left(\sup_{n\geq N}f_n\right).
+\end{align*}
+Obie funkcje są mierzalne jako kolejne kresy funkcji mierzalnych.
+Jeżeli granica istnieje, jest równa zarówno granicy dolnej, jak i górnej,
+więc także jest mierzalna.
+\end{proof}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.74\textwidth]{funkcje-minimum-maksimum.pdf}
+  \caption{Punktowe minimum i maksimum dwóch funkcji.}
+  \label{fig:minimum-maksimum}
+\end{figure}
+
+\section{Funkcje borelowskie i złożenia}
+\label{sec:borelowskie-zlozenia}
+
+\begin{definicja}[Funkcja borelowska]
+\label{def:funkcja-borelowska}
+Funkcję $f\colon\R\to\R$ nazywamy borelowską, jeżeli
+dla każdego $a\in\R$ zbiór $\{x\in\R:f(x)>a\}$ jest borelowski.
+Jest to mierzalność względem sigma-ciała $\mathcal{B}(\R)$.
+\end{definicja}
+
+\begin{uwaga}
+W definicji można równoważnie użyć dowolnej z nierówności
+$\geq$, $<$ lub $\leq$. Na mocy
+twierdzenia~\ref{tw:mierzalnosc-borelowska} warunek ten jest równoważny
+temu, że $f^{-1}(B)\in\mathcal{B}(\R)$ dla każdego
+$B\in\mathcal{B}(\R)$.
+\end{uwaga}
+
+\begin{uwaga}
+Każda funkcja borelowska jest mierzalna względem $\mathcal{L}$,
+ponieważ $\mathcal{B}(\R)\subseteq\mathcal{L}$.
+Mówiąc o funkcji $f\colon\R\to\R$ po prostu „mierzalna”,
+będziemy w tym kontekście mieć na myśli mierzalność względem
+sigma-ciała zbiorów mierzalnych w sensie Lebesgue'a.
+\end{uwaga}
+
+\begin{twierdzenie}[Mierzalność złożenia]
+\label{tw:zlozenie-borelowska-mierzalna}
+Jeżeli $g\colon X\to\R$ jest mierzalna, a $f\colon\R\to\R$
+jest borelowska, to złożenie
+\[
+  f\circ g\colon X\to\R,\qquad (f\circ g)(x)=f(g(x))
+\]
+jest mierzalne.
+\end{twierdzenie}
+
+\begin{proof}
+Dla każdego $a\in\R$ zachodzi
+\[
+  \{x:f(g(x))>a\}
+  =(f\circ g)^{-1}((a,+\infty))
+  =g^{-1}\bigl(f^{-1}((a,+\infty))\bigr).
+\]
+Przeciwobraz $f^{-1}((a,+\infty))$ jest borelowski, więc jego
+przeciwobraz przez mierzalną funkcję $g$ należy do $\mathcal{F}$.
+\end{proof}
+
+\begin{twierdzenie}[Funkcje ciągłe]
+\label{tw:ciagla-borelowska}
+Każda funkcja ciągła $f\colon\R\to\R$ jest borelowska.
+\end{twierdzenie}
+
+\begin{proof}
+Dla każdego $a\in\R$ przeciwobraz otwartej półprostej
+$(a,+\infty)$ przez funkcję ciągłą jest otwarty, a więc borelowski.
+Schemat takiego przeciwobrazu przedstawia
+rysunek~\ref{fig:ciagla-przeciwobraz}.
+\end{proof}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.72\textwidth]{funkcja-ciagla-przeciwobraz.pdf}
+  \caption{Przeciwobraz półprostej $(a,+\infty)$ przez funkcję ciągłą.}
+  \label{fig:ciagla-przeciwobraz}
+\end{figure}
+
+\section{Równość prawie wszędzie}
+\label{sec:prawie-wszedzie}
+
+Niech $(X,\mathcal{F},\mu)$ będzie przestrzenią z miarą,
+a $f,g\colon X\to\R$ będą mierzalne.
+Poniższe pojęcia stosujemy również do funkcji o wartościach w $\Rbar$.
+
+\begin{definicja}[Równość prawie wszędzie]
+\label{def:rownosc-prawie-wszedzie}
+Mówimy, że $f$ i $g$ są równe $\mu$-prawie wszędzie, jeżeli
+\[
+  \mu(\{x\in X:f(x)\neq g(x)\})=0.
+\]
+Piszemy wtedy $f=g$ $\mu$-p.w. Używa się także skrótu
+$\mu$-a.e. (\emph{almost everywhere}).
+\end{definicja}
+
+Zbiory występujące w tej definicji są mierzalne. Również dla wartości
+rozszerzonych można bowiem zapisać
+\[
+  \{x:f(x)<g(x)\}
+  =\bigcup_{q\in\mathbb{Q}}
+    \bigl(\{x:f(x)<q\}\cap\{x:g(x)>q\}\bigr),
+\]
+a zbiór $\{f\neq g\}$ jest sumą zbiorów $\{f<g\}$ i $\{g<f\}$.
+
+\begin{przyklad}[Funkcja Dirichleta]
+\label{prz:dirichlet-prawie-wszedzie}
+Na $\R$ rozważmy funkcje
+\[
+  O(x)=0,\qquad D(x)=\mathbf{1}_{\mathbb{Q}}(x).
+\]
+Zbiór, na którym się różnią, jest równy $\mathbb{Q}$.
+Jest on przeliczalny, zatem ma miarę Lebesgue'a zero i
+$O=D$ $\lambda$-p.w. Funkcje te nie są jednak równe $\delta_0$-p.w.,
+ponieważ $\delta_0(\mathbb{Q})=1$.
+Z kolei $D$ i funkcja stale równa $1$ są równe $\delta_0$-p.w.:
+ich zbiór różnic to $\R\setminus\mathbb{Q}$, który nie zawiera zera.
+\end{przyklad}
+
+\begin{twierdzenie}
+\label{tw:prawie-wszedzie-rownowaznosc}
+Równość $\mu$-prawie wszędzie jest relacją równoważności
+na zbiorze funkcji mierzalnych.
+\end{twierdzenie}
+
+\begin{proof}
+Zwrotność i symetria wynikają bezpośrednio z definicji.
+Dla przechodniości załóżmy, że $f=g$ $\mu$-p.w. oraz
+$g=h$ $\mu$-p.w. Rozbijamy zbiór różnic na dwie rozłączne części:
+\begin{align*}
+  \mu(\{f\neq h\})
+    &=\mu(\{f\neq h\}\cap\{f=g\})
+      +\mu(\{f\neq h\}\cap\{f\neq g\})\\
+    &\leq\mu(\{g\neq h\})+\mu(\{f\neq g\})=0.
+\end{align*}
+W pierwszym składniku użyliśmy tego, że z $f(x)=g(x)$ i
+$f(x)\neq h(x)$ wynika $g(x)\neq h(x)$.
+Zatem $f=h$ $\mu$-p.w.
+\end{proof}
+
+\begin{definicja}[Własność zachodząca prawie wszędzie]
+\label{def:wlasnosc-prawie-wszedzie}
+Mówimy, że własność $P(x)$ zachodzi $\mu$-prawie wszędzie,
+jeżeli istnieje zbiór $E\in\mathcal{F}$ taki, że
+$\mu(E^c)=0$ i $P(x)$ jest prawdziwa dla każdego $x\in E$.
+\end{definicja}

@@ -63,7 +63,10 @@ Buduj przez `kompiluj.ps1`, aby zaktualizować oba pliki.
   przestrzeń z miarą, własności miar, konstrukcja miary Lebesgue'a
   oraz dystrybuanty miar.
 - Rozdział 3 „Funkcje mierzalne”: równoważne warunki mierzalności,
-  przeciwobrazy przedziałów i zbiorów borelowskich oraz działania na funkcjach.
+  przeciwobrazy przedziałów i zbiorów borelowskich, działania i granice
+  funkcji, funkcje borelowskie, złożenia oraz równość prawie wszędzie.
+- Rozdział 4 „Całka Lebesgue'a”: funkcje charakterystyczne, funkcje proste,
+  postać kanoniczna i pierwszy etap definicji całki.
 
 Podział obowiązuje w obu wariantach. Wykład 1 obejmuje także początek
 rozdziału 1; Wykład 2 zaczyna się przy własnościach sigma-ciał.
@@ -82,6 +85,9 @@ Wykład 7 zaczyna się od dystrybuant miar (sekcja 2.12), a następnie
 przechodzi do rozdziału 3 „Funkcje mierzalne”. Zdjęcia IMG_7022–IMG_7033
 obejmują także przykłady dystrybuant i dowody kryteriów mierzalności.
 Ostatnia fotografia kończy rozpatrywanie mnożenia funkcji przez stałą.
+Wykład 8 kontynuuje dowód z sekcji 3.3, a następnie obejmuje sekcje
+3.4–3.6 i początek rozdziału 4. Zdjęcia IMG_7078–IMG_7088 są przepisane
+w kolejności; powtórzenia poprzednich twierdzeń scalono z istniejącą treścią.
 
 W obu wariantach przed sekcją 2.8 znajduje się nienumerowany znacznik
 „Limbo”. Drugi znacznik „Limbo” zamyka ten fragment po dowodzie braku
