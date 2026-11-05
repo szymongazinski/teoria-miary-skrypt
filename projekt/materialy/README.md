@@ -414,6 +414,68 @@ zapisano w `2026-11-04/`, z zachowaniem nazw i kolejności:
   Materiał kończy się równością całki 1_E z mu(E); nie dodano dalszych
   etapów konstrukcji całki ani twierdzeń spoza zdjęć.
 
+## Wykład 9: materiały otrzymane 5 listopada 2026 r.
+
+Niezmienione kopie ośmiu plików z `C:\Users\szymo\AppData\Local\Temp\`
+zapisano w `2026-11-05/`. Zachowano nazwy plików:
+
+- `0a6d0617ed8f0d6ac51795a51991f60c.JPEG` - dwa przedstawienia tej samej
+  funkcji prostej z nieujemnymi współczynnikami; rozbicie rodziny A_i
+  przez ciągi zero-jedynkowe.
+- `0e16e2addef6acd153f09e5846efad76.JPEG` - monotoniczność całki funkcji
+  prostej, dowody nieujemności i jednorodności oraz początek addytywności.
+- `32e7f934e7400b08c8a7ec111166b325.JPEG` - porównanie sum po rozłącznym
+  podziale i wspólnym podziale A_k przekrój B_l.
+- `43a48d00cb9b8112fa84c6b8a6274548.JPEG` - dalszy ciąg dowodu
+  addytywności całki funkcji prostej.
+- `60f78a0c7a59c2bc293650cceae0cb0a.JPEG` - rozbicie rodziny B_j,
+  wspólny podział i wartości funkcji na jego częściach; schematy podziałów.
+- `396f9cc9962326c0d3fa66e05e795b09.JPEG` - etap drugi: definicja całki
+  funkcji nieujemnej przez supremum, cztery własności, dowody nieujemności
+  i jednorodności.
+- `d90e6aa40bbf0bb16bf3c3eb9ddaab57.JPEG` - całka po zbiorze E,
+  konwencja pomijania X i własności tej całki, z rysunkiem.
+- `396f9cc9962326c0d3fa66e05e795b09_1.JPEG` - identyczna kopia zdjęcia
+  etapu drugiego; zachowano plik, a treść przepisano tylko raz.
+
+### Zakres i decyzje redakcyjne
+
+- Znacznik wykładu 9 wstawiono przed sekcją 4.4. Pozostaje on w rozdziale
+  4 „Całka Lebesgue'a”, bez resetowania liczników elementów.
+- Fragmenty uporządkowano według ciągłości dowodów: pierwsze zdjęcie,
+  rozbicie B_j i schematy (`60f78...`), obliczenia (`32e7...`), własności
+  całki prostej (`0e16...`, `43a4...`), całka po E (`d90e...`), etap drugi
+  (`396f...`). Nie dublowano powtarzających się wzorów.
+- W dowodzie niezależności od przedstawienia rozróżniono zbiory A_i,
+  ich rozłączne części A_k i stałe wartości alpha_k=sum k_i*a_i, zgodnie
+  z tablicą. Dla B_j przyjęto analogiczne beta_l. Równość alpha_k=beta_l
+  jest potrzebna tylko na niepustych częściach A_k przekrój B_l; puste
+  części mają miarę zero. Wyjaśniono, dlaczego rozbicia pokrywają X.
+- Zbiory w początkowych przedstawieniach nie muszą być rozłączne ani
+  pokrywać X. Dowód przez dopełnienia obejmuje również te przypadki,
+  także zerową wartość funkcji poza sumą zbiorów. Nie założono z góry
+  postaci kanonicznej w pierwszym twierdzeniu.
+- Etap pierwszy z poprzedniego wykładu dopuszczał funkcje obu znaków,
+  o ile suma całkowa jest określona. Nowe własności i etap drugi dotyczą
+  funkcji nieujemnych: PMN (proste mierzalne nieujemne) oraz MN (mierzalne
+  nieujemne), z możliwą nieskończoną całką i konwencją 0*infinity=0.
+- Dowód monotoniczności całki prostej rozwinięto przez g=f+(g-f), bez
+  odejmowania potencjalnie nieskończonych całek. Dowód addytywności
+  zachowuje wspólny podział z fotografii.
+- Definicja całki po E jest na zdjęciu podana dla PMN, więc umieszczono ją
+  przed etapem drugim. Krótko rozwinięto wskazanie, że własności są takie
+  jak dla całki po X, przez pomnożenie funkcji przez 1_E.
+- Etap drugi dopuszcza nieujemne wartości rozszerzone. Dodano krótkie
+  sprawdzenie zgodności obu definicji dla funkcji prostych, korzystając
+  wyłącznie z poprzednio wykazanej monotoniczności i wyboru s=f.
+- Przepisano cztery własności etapu drugiego. Zdjęcia zawierają dowody
+  punktów 1 i 2; doprecyzowano c=0, a punkt 4 uzasadniono bezpośrednio
+  z inkluzji rodzin funkcji pod supremum. Dowód ma tytuł wskazujący
+  dokładnie punkty 1, 2 i 4. Dla sformułowanej na tablicy addytywności
+  funkcji MN nie dopisano dowodu ani twierdzeń granicznych spoza materiałów.
+- Odtworzono schematy podziałów, funkcji prostych leżących pod f
+  i całkowania po E jako osobne źródła TikZ. Daty nie trafiają do PDF-ów.
+
 ## Okładka
 
 Zatwierdzona ilustracja znajduje się w `grafika/okladka-kreskowkowa.png`.

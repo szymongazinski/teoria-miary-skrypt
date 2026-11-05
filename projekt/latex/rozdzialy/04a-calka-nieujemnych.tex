@@ -1,0 +1,252 @@
+\poczatekwykladu{9}
+
+\section{Niezależność całki od zapisu}
+\label{sec:niezaleznosc-calki-od-zapisu}
+
+W dalszej części rozpatrujemy funkcje nieujemne. Przez
+$\mathrm{PMN}$ oznaczamy rodzinę prostych mierzalnych funkcji
+nieujemnych na $X$. Ich całki są określone i należą do $[0,+\infty]$.
+Nadal stosujemy konwencję $0\cdot(+\infty)=0$.
+
+\begin{twierdzenie}[Niezależność od przedstawienia]
+\label{tw:calka-niezalezna-od-przedstawienia}
+Niech
+\[
+  f=\sum_{i=1}^{m}a_i\mathbf{1}_{A_i}
+   =\sum_{j=1}^{n}b_j\mathbf{1}_{B_j},
+\]
+gdzie $A_i,B_j\in\mathcal{F}$ oraz $a_i,b_j\geq0$.
+Zbiory w tych przedstawieniach nie muszą być rozłączne.
+Wówczas
+\begin{equation}
+  \sum_{i=1}^{m}a_i\mu(A_i)
+  =\sum_{j=1}^{n}b_j\mu(B_j)
+  =\int_X f\,d\mu.
+  \label{eq:calka-dowolny-zapis-prostej}
+\end{equation}
+\end{twierdzenie}
+
+\begin{proof}
+Najpierw rozbijemy rodziny zbiorów na rozłączne części.
+Oznaczmy $A_i^1=A_i$ i $A_i^0=A_i^c$. Dla
+$k=(k_1,\ldots,k_m)\in\{0,1\}^m$ połóżmy
+\[
+  A_k=\bigcap_{i=1}^{m}A_i^{k_i}.
+\]
+Zbiory $A_k$ są mierzalne, parami rozłączne i pokrywają $X$.
+Istotnie, każdy punkt ma jednoznacznie określony ciąg przynależności
+do zbiorów $A_1,\ldots,A_m$. Niektóre części $A_k$ mogą być puste.
+Analogicznie, dla $\ell=(\ell_1,\ldots,\ell_n)\in\{0,1\}^n$
+definiujemy
+\[
+  B_\ell=\bigcap_{j=1}^{n}B_j^{\ell_j},
+  \qquad B_j^1=B_j,\quad B_j^0=B_j^c.
+\]
+Rodzina zbiorów $A_k\cap B_\ell$ jest wspólnym rozłącznym podziałem
+$X$ (rysunek~\ref{fig:wspolny-podzial-prostej}).
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.96\textwidth]{wspolny-podzial-prostej.pdf}
+  \caption{Rozbicie rodzin zbiorów i ich wspólny podział: części o ustalonej przynależności do obu rodzin.}
+  \label{fig:wspolny-podzial-prostej}
+\end{figure}
+
+Na zbiorze $A_k$ pierwszy zapis funkcji ma stałą wartość
+\[
+  \alpha_k=\sum_{i=1}^{m}k_i a_i,
+\]
+a na $B_\ell$ drugi zapis ma stałą wartość
+$\beta_\ell=\sum_{j=1}^{n}\ell_j b_j$.
+Jeżeli $A_k\cap B_\ell\neq\varnothing$, to
+$\alpha_k=\beta_\ell$, ponieważ oba zapisy przedstawiają tę samą funkcję.
+
+Dla każdego $i$ mamy rozłączny rozkład
+$A_i=\bigcup_{k:\,k_i=1}A_k$. Ze skończonej addytywności miary
+i przestawienia skończonych sum nieujemnych składników otrzymujemy
+\begin{align*}
+  \sum_{i=1}^{m}a_i\mu(A_i)
+  &=\sum_{i=1}^{m}\sum_{k:\,k_i=1}a_i\mu(A_k)\\
+  &=\sum_{k\in\{0,1\}^m}
+      \left(\sum_{i=1}^{m}k_i a_i\right)\mu(A_k)
+   =\sum_k\alpha_k\mu(A_k).
+\end{align*}
+Następnie rozbijamy każdy $A_k$ na części $A_k\cap B_\ell$:
+\begin{align*}
+  \sum_k\alpha_k\mu(A_k)
+  &=\sum_{k,\ell}\alpha_k\mu(A_k\cap B_\ell)\\
+  &=\sum_{k,\ell}\beta_\ell\mu(A_k\cap B_\ell)\\
+  &=\sum_\ell\beta_\ell\mu(B_\ell)
+   =\sum_{j=1}^{n}b_j\mu(B_j).
+\end{align*}
+W drugiej równości korzystamy z $\alpha_k=\beta_\ell$ na niepustych
+częściach podziału; dla części pustych oba składniki są zerowe.
+Ostatnia równość jest analogiczna do obliczenia dla rodziny $A_i$.
+Porównując dowolny zapis z postacią kanoniczną, otrzymujemy również
+równość z całką z definicji~\ref{def:calka-prostej}.
+\end{proof}
+
+\section{Własności całki funkcji prostej}
+\label{sec:wlasnosci-calki-prostej}
+
+\begin{twierdzenie}
+\label{tw:wlasnosci-calki-prostej}
+Dla $f,g\in\mathrm{PMN}$ i $c\geq0$ zachodzą następujące własności:
+\begin{enumerate}
+  \item $\displaystyle\int_X f\,d\mu\geq0$;
+  \item $\displaystyle\int_X cf\,d\mu=c\int_X f\,d\mu$;
+  \item $\displaystyle\int_X(f+g)\,d\mu
+          =\int_X f\,d\mu+\int_X g\,d\mu$;
+  \item jeśli $f\leq g$, to
+        $\displaystyle\int_X f\,d\mu\leq\int_X g\,d\mu$.
+\end{enumerate}
+\end{twierdzenie}
+
+\begin{proof}
+\emph{1)} Niech $f=\sum_{i=1}^{m}a_i\mathbf{1}_{A_i}$ będzie postacią
+kanoniczną. Z $f\geq0$ wynika $a_i\geq0$, a więc wszystkie składniki
+$a_i\mu(A_i)$ są nieujemne.
+
+\emph{2)} Mamy $cf=\sum_{i=1}^{m}ca_i\mathbf{1}_{A_i}$.
+Z twierdzenia~\ref{tw:calka-niezalezna-od-przedstawienia} wynika
+\[
+  \int_X cf\,d\mu
+  =\sum_{i=1}^{m}ca_i\mu(A_i)
+  =c\sum_{i=1}^{m}a_i\mu(A_i)
+  =c\int_X f\,d\mu.
+\]
+Dla $c=0$ obie strony są zerowe, także gdy całka z $f$ jest nieskończona.
+
+\emph{3)} Niech $f=\sum_{i=1}^{m}a_i\mathbf{1}_{A_i}$ i
+$g=\sum_{j=1}^{n}b_j\mathbf{1}_{B_j}$ będą postaciami kanonicznymi.
+Zbiory $A_i\cap B_j$ tworzą rozłączny podział $X$, przy czym
+\[
+  f+g=\sum_{i=1}^{m}\sum_{j=1}^{n}
+       (a_i+b_j)\mathbf{1}_{A_i\cap B_j}.
+\]
+Ten zapis nie musi być kanoniczny, lecz możemy obliczyć z niego całkę:
+\begin{align*}
+  \int_X(f+g)\,d\mu
+  &=\sum_{i=1}^{m}\sum_{j=1}^{n}(a_i+b_j)\mu(A_i\cap B_j)\\
+  &=\sum_{i=1}^{m}a_i\sum_{j=1}^{n}\mu(A_i\cap B_j)
+    +\sum_{j=1}^{n}b_j\sum_{i=1}^{m}\mu(A_i\cap B_j)\\
+  &=\sum_{i=1}^{m}a_i\mu(A_i)+\sum_{j=1}^{n}b_j\mu(B_j)\\
+  &=\int_X f\,d\mu+\int_X g\,d\mu.
+\end{align*}
+Użyliśmy rozłączności poziomic oraz równości
+$\bigcup_j B_j=X$ i $\bigcup_i A_i=X$.
+
+\emph{4)} Jeżeli $f\leq g$, to $g-f\in\mathrm{PMN}$. Z punktów 1) i 3)
+otrzymujemy
+\[
+  \int_X g\,d\mu
+  =\int_X f\,d\mu+\int_X(g-f)\,d\mu
+  \geq\int_X f\,d\mu.
+\]
+Nie odejmujemy tu całek, które mogłyby być nieskończone.
+\end{proof}
+
+\section{Całka po zbiorze mierzalnym}
+\label{sec:calka-po-zbiorze}
+
+\begin{definicja}
+\label{def:calka-prostej-po-zbiorze}
+Dla $E\in\mathcal{F}$ i $f\in\mathrm{PMN}$ definiujemy
+\begin{equation}
+  \int_E f\,d\mu=\int_X f\mathbf{1}_E\,d\mu.
+  \label{eq:calka-po-zbiorze}
+\end{equation}
+Przyjmujemy konwencję $\int f\,d\mu=\int_X f\,d\mu$.
+\end{definicja}
+
+\begin{fakt}
+\label{fakt:wlasnosci-calki-po-zbiorze}
+Własności z twierdzenia~\ref{tw:wlasnosci-calki-prostej} zachodzą także
+dla całki po zbiorze $E\in\mathcal{F}$. W szczególności
+\[
+  \int_E(f+g)\,d\mu=\int_E f\,d\mu+\int_E g\,d\mu.
+\]
+\end{fakt}
+
+\begin{proof}
+Stosujemy odpowiednie własności do funkcji $f\mathbf{1}_E$
+i $g\mathbf{1}_E$. Na przykład
+$(f+g)\mathbf{1}_E=f\mathbf{1}_E+g\mathbf{1}_E$.
+\end{proof}
+
+\section{Całka funkcji nieujemnej: etap drugi}
+\label{sec:calka-nieujemnej-etap-drugi}
+
+Przez $\mathrm{MN}$ oznaczamy rodzinę mierzalnych funkcji nieujemnych
+$f\colon X\to[0,+\infty]$.
+
+\begin{definicja}[Całka funkcji nieujemnej]
+\label{def:calka-nieujemnej}
+Dla $f\in\mathrm{MN}$ definiujemy
+\begin{equation}
+  \int_X f\,d\mu
+  =\sup\left\{\int_X s\,d\mu:
+       s\in\mathrm{PMN},\ s\leq f\right\}.
+  \label{eq:calka-nieujemnej-supremum}
+\end{equation}
+Nierówność $s\leq f$ ma zachodzić w każdym punkcie $X$.
+\end{definicja}
+
+Całkę wyznaczamy zatem za pomocą całek funkcji prostych leżących pod $f$.
+Rodzina w definicji jest niepusta, ponieważ zawiera funkcję zerową.
+Supremum może być równe $+\infty$.
+Schematy przedstawia rysunek~\ref{fig:calka-nieujemnej}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.96\textwidth]{calka-nieujemnej.pdf}
+  \caption{Po lewej: funkcje proste nieujemne leżące pod $f$. Po prawej: ograniczenie całkowania do zbioru $E$.}
+  \label{fig:calka-nieujemnej}
+\end{figure}
+
+\begin{uwaga}[Zgodność z etapem pierwszym]
+\label{uw:zgodnosc-etapow-calki}
+Jeżeli $f\in\mathrm{PMN}$, definicja~\ref{def:calka-nieujemnej}
+daje tę samą wartość co definicja~\ref{def:calka-prostej}.
+Istotnie, dla $s\in\mathrm{PMN}$ spełniającej $s\leq f$ monotoniczność
+całki funkcji prostej daje $\int_X s\,d\mu\leq\int_X f\,d\mu$.
+Z drugiej strony w supremum możemy wybrać $s=f$.
+\end{uwaga}
+
+\begin{twierdzenie}[Własności całki funkcji nieujemnej]
+\label{tw:wlasnosci-calki-nieujemnej}
+Dla $f,g\in\mathrm{MN}$ i $c\geq0$ mamy:
+\begin{enumerate}
+  \item $\displaystyle\int_X f\,d\mu\geq0$;
+  \item $\displaystyle\int_X cf\,d\mu=c\int_X f\,d\mu$;
+  \item $\displaystyle\int_X(f+g)\,d\mu
+          =\int_X f\,d\mu+\int_X g\,d\mu$;
+  \item jeśli $f\leq g$, to
+        $\displaystyle\int_X f\,d\mu\leq\int_X g\,d\mu$.
+\end{enumerate}
+\end{twierdzenie}
+
+\begin{proof}[Uzasadnienie punktów 1), 2) i 4)]
+\emph{1)} Wszystkie całki występujące pod supremum w
+\eqref{eq:calka-nieujemnej-supremum} są nieujemne.
+
+\emph{2)} Dla $c>0$ warunek $s\in\mathrm{PMN}$ i $s\leq cf$ jest
+równoważny warunkowi $s=c\widetilde{s}$, gdzie
+$\widetilde{s}\in\mathrm{PMN}$ i $\widetilde{s}\leq f$.
+Korzystając z jednorodności całki funkcji prostej, dostajemy
+\begin{align*}
+  \int_X cf\,d\mu
+  &=\sup\left\{\int_X s\,d\mu:s\in\mathrm{PMN},\ s\leq cf\right\}\\
+  &=\sup\left\{c\int_X\widetilde{s}\,d\mu:
+             \widetilde{s}\in\mathrm{PMN},\ \widetilde{s}\leq f\right\}\\
+  &=c\sup\left\{\int_X\widetilde{s}\,d\mu:
+             \widetilde{s}\in\mathrm{PMN},\ \widetilde{s}\leq f\right\}
+   =c\int_X f\,d\mu.
+\end{align*}
+Dla $c=0$ funkcja $cf$ jest zerowa i obie strony są zerowe,
+przy przyjętej konwencji $0\cdot(+\infty)=0$.
+
+\emph{4)} Jeśli $f\leq g$, każda funkcja prosta nieujemna $s\leq f$
+spełnia także $s\leq g$. Supremum dla $f$ bierzemy więc po podrodzinie
+rodziny użytej dla $g$, co daje żądaną nierówność.
+\end{proof}

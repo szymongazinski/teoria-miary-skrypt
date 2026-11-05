@@ -48,6 +48,19 @@ kompilowane przez `kompiluj.ps1` do plików PDF w tym samym folderze.
 Wykresy są odtworzeniami schematów z tablicy. Pomocnicze krzywe
 nie wprowadzają dodatkowych przykładów z zadanymi wzorami.
 
+## Wykład 9
+
+- `wspolny-podzial-prostej.tex` - schemat z rozbicia rodzin A_i i B_j
+  na części o ustalonej przynależności, a następnie ich wspólny podział
+  ze zdjęcia `60f78a0c7a59c2bc293650cceae0cb0a.JPEG`. Pokazano części
+  dla dwóch zbiorów w każdej rodzinie, także dopełnienia; części puste
+  nie pojawiają się na schemacie.
+- `calka-nieujemnej.tex` - funkcje proste leżące pod krzywą z fotografii
+  `396f9cc9962326c0d3fa66e05e795b09.JPEG` oraz całkowanie po zbiorze E
+  z `d90e6aa40bbf0bb16bf3c3eb9ddaab57.JPEG`. W lewym panelu kreska
+  przerywana przedstawia s_1, górna krawędź szarych prostokątów s_2.
+  Krzywa ma charakter schematyczny, bez wprowadzania nowego przykładu.
+
 ## Okładka
 
 - `okladka-kreskowkowa.png` - zatwierdzona ilustracja: postać patrząca

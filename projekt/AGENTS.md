@@ -35,6 +35,12 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
   Nagłówek „Całka Lebesgue'a” z IMG_7086 rozpoczyna rozdział 4.
   Wykład kończy się definicją całki mierzalnej funkcji prostej w postaci
   kanonicznej i równością całki funkcji charakterystycznej z miarą zbioru.
+- Wykład 9 kontynuuje rozdział 4 w sekcjach 4.4–4.7: niezależność całki
+  funkcji prostej od zapisu (także na nakładających się zbiorach), jej
+  własności, całka po zbiorze oraz drugi etap dla funkcji nieujemnych.
+  PMN oznacza funkcje proste mierzalne nieujemne, MN funkcje mierzalne
+  nieujemne. Twierdzenie o addytywności na etapie drugim jest na tablicy
+  sformułowane bez dowodu; nie dopisuj tu dalszych twierdzeń z teorii całki.
 - W obu wariantach umieszczaj nienumerowany znacznik „Limbo” przed sekcją
   2.8 i drugi, o tym samym brzmieniu, po dowodzie braku przeliczalnej
   addytywności lambda* na P(R). Oba mają własne wpisy w spisie treści.
