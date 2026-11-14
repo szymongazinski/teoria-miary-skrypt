@@ -67,7 +67,8 @@ Buduj przez `kompiluj.ps1`, aby zaktualizować oba pliki.
   funkcji, funkcje borelowskie, złożenia oraz równość prawie wszędzie.
 - Rozdział 4 „Całka Lebesgue'a”: funkcje charakterystyczne, funkcje proste,
   postać kanoniczna, niezależność całki od przedstawienia, własności całki
-  funkcji prostej, całka po zbiorze i drugi etap dla funkcji nieujemnych.
+  funkcji prostej, całka po zbiorze, zbieżność monotoniczna, a także
+  całka i całkowalność funkcji obu znaków.
 
 Podział obowiązuje w obu wariantach. Wykład 1 obejmuje także początek
 rozdziału 1; Wykład 2 zaczyna się przy własnościach sigma-ciał.
@@ -93,6 +94,10 @@ Wykład 9 pozostaje w rozdziale 4 (sekcje 4.4–4.7). Zaczyna się dowodem
 niezależności całki funkcji prostej od zapisu. Dalej obejmuje własności
 tej całki, całkowanie po zbiorze i definicję całki mierzalnej funkcji
 nieujemnej jako supremum całek funkcji prostych leżących pod nią.
+Wykład 10 obejmuje sekcje 4.8–4.12. Zaczyna się przybliżaniem od dołu
+przez funkcje proste, a następnie obejmuje twierdzenie o zbieżności
+monotonicznej, dowód addytywności całki funkcji nieujemnej i całkę
+funkcji mierzalnej przez jej części dodatnią i ujemną.
 Powtórzone zdjęcie etapu drugiego uwzględniono tylko raz.
 
 W obu wariantach przed sekcją 2.8 znajduje się nienumerowany znacznik

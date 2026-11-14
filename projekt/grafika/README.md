@@ -61,6 +61,13 @@ nie wprowadzają dodatkowych przykładów z zadanymi wzorami.
   przerywana przedstawia s_1, górna krawędź szarych prostokątów s_2.
   Krzywa ma charakter schematyczny, bez wprowadzania nowego przykładu.
 
+## Wykład 10
+
+- `przyblizenie-dyadyczne.tex` - odtworzenie schematu z IMG_7127
+  z przybliżeniami o krokach 1/2 i 1/4 oraz wysokościach obcięcia 1 i 2.
+- `czesci-funkcji.tex` - wykres z IMG_7133 z odbiciem ujemnego
+  fragmentu wykresu oraz zaznaczonymi obszarami pod krzywą i nad nią.
+
 ## Okładka
 
 - `okladka-kreskowkowa.png` - zatwierdzona ilustracja: postać patrząca

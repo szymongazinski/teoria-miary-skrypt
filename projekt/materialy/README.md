@@ -476,6 +476,34 @@ zapisano w `2026-11-05/`. Zachowano nazwy plików:
 - Odtworzono schematy podziałów, funkcji prostych leżących pod f
   i całkowania po E jako osobne źródła TikZ. Daty nie trafiają do PDF-ów.
 
+## Wykład 10 – 2026-11-14
+
+W katalogu `2026-11-14/` zachowano dziesięć oryginalnych fotografii.
+Numer IMG_7131 został pominięty w przekazanym komplecie zgodnie
+z informacją użytkownika.
+
+- `IMG_7127.jpeg` i `IMG_7128.jpeg` - konstrukcja niemalejącego
+  przybliżenia funkcjami prostymi i rysunek.
+- `IMG_7129.jpeg` - twierdzenie o zbieżności monotonicznej oraz wniosek
+  o granicy całek funkcji prostych.
+- `IMG_7130.jpeg` - dowód addytywności całki funkcji nieujemnej.
+- `IMG_7132.jpeg` - całka funkcji nieujemnej po zbiorze mierzalnym
+  i addytywność względem dwóch zbiorów rozłącznych.
+- `IMG_7133.jpeg` - część dodatnia i część ujemna funkcji, rysunek
+  oraz kryterium mierzalności.
+- `IMG_7134.jpeg` - definicje całki funkcji mierzalnej i całkowalności.
+  Górny fragment tablicy powtarza początek dowodu z IMG_7130.
+- `IMG_7135.jpeg` - oszacowanie modułu całki, całkowalność na zbiorze
+  oraz przejście do podzbioru.
+- `IMG_7136.jpeg` i `IMG_7137.jpeg` - własności całki funkcji
+  całkowalnej i dowód addytywności.
+
+W konstrukcji przybliżenia uwzględniono wartość na zbiorze obcięcia,
+więc liczba wartości jest ograniczona przez n*2^n+1. Twierdzenie
+o zbieżności monotonicznej sformułowano w zakresie z tablicy.
+Uzasadniono przejście do wersji prawie wszędzie oraz doprecyzowano
+dodawanie funkcji całkowalnych o wartościach rozszerzonych.
+
 ## Okładka
 
 Zatwierdzona ilustracja znajduje się w `grafika/okladka-kreskowkowa.png`.
