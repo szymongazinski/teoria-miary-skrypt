@@ -98,6 +98,9 @@ Wykład 10 obejmuje sekcje 4.8–4.12. Zaczyna się przybliżaniem od dołu
 przez funkcje proste, a następnie obejmuje twierdzenie o zbieżności
 monotonicznej, dowód addytywności całki funkcji nieujemnej i całkę
 funkcji mierzalnej przez jej części dodatnią i ujemną.
+Wykład 11 obejmuje sekcje 4.13–4.16. Dotyczy całki po zbiorze miary zero,
+równości prawie wszędzie, miar atomowych, sum miar, miary liczącej
+oraz związku całek Riemanna i Lebesgue'a z przykładami.
 Powtórzone zdjęcie etapu drugiego uwzględniono tylko raz.
 
 W obu wariantach przed sekcją 2.8 znajduje się nienumerowany znacznik

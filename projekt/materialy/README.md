@@ -508,6 +508,51 @@ dodawanie funkcji całkowalnych o wartościach rozszerzonych.
 
 Zatwierdzona ilustracja znajduje się w `grafika/okladka-kreskowkowa.png`.
 Przedstawia antyczną scenę z postacią patrzącą w górę i napisem
-„PRAWDZIWE σ-CIAŁO” na cokole. Schemat aksjomatu wyboru pokazuje
-wybór jednego kwiatu z każdej donicy. Okładkę osadza `grafika/okladka.tex`;
+„PRAWDZIWE σ-CIAŁO” na cokole. Mędrzec w granatowej szacie mówi
+„Wyjątkowo zadał Pan dobre pytanie...”. Okładkę osadza `grafika/okladka.tex`;
 jest wspólna dla obu wariantów PDF. Repozytorium jest publiczne.
+
+## Wykład 11 – 2026-11-18
+
+W katalogu `2026-11-18/` zachowano dwanaście oryginalnych fotografii.
+Treść ułożono zgodnie z przebiegiem wywodu i numerami IMG_7165–IMG_7176.
+
+- `IMG_7165.jpeg` i `IMG_7166.jpeg` - przypomnienie konstrukcji
+  całki oraz dowód zerowania całki po zbiorze miary zero.
+- `IMG_7167.jpeg` i `IMG_7168.jpeg` - równość całek funkcji równych
+  prawie wszędzie, a następnie przykład miary Diraca.
+- `IMG_7169.jpeg` - miara dwupunktowa o wagach 1 i 2.
+- `IMG_7170.jpeg` - całka względem sumy miar oraz miara licząca.
+- `IMG_7171.jpeg` i `IMG_7172.jpeg` - szeregi na Z i twierdzenie
+  o zgodności z całką Riemanna. Powtarzające się sformułowanie scalono.
+- `IMG_7173.jpeg` i `IMG_7174.jpeg` - funkcja Dirichleta,
+  całka niewłaściwa funkcji schodkowej i początek dowodu przez sumy Darboux.
+- `IMG_7175.jpeg` i `IMG_7176.jpeg` - dalszy ciąg dowodu zgodności.
+
+### Doprecyzowania matematyczne
+
+- Dowód dla miary Diraca zapisano najpierw dla funkcji prostych,
+  a następnie przez przybliżenie i części dodatnią oraz ujemną.
+  Dzięki temu nie wymaga mierzalności singletonu. Rozbicie na singleton
+  i jego dopełnienie z fotografii opisano przy odpowiednim założeniu.
+- We wzorze dla sumy miar wskazano warunek istnienia całki funkcji obu
+  znaków. Dla szeregów na Z doprecyzowano warunek sumowalności części
+  dodatniej lub ujemnej oraz związek całkowalności z sumą modułów.
+- W sumach Darboux użyto infimum i supremum. Wartości funkcji na
+  końcach odcinków uwzględniono przez rozłączny podział [a,b].
+- Dowód z tablicy był prowadzony modulo mierzalność f. Uzupełniono
+  ten krok przez zbieżność różnic sum Darboux do zera oraz zupełność
+  miary Lebesgue'a. W przekształceniu g=M-f uwzględniono czynnik b-a.
+- W przykładzie funkcji schodkowej użyto poprawnego oszacowania
+  1/(n+1) dla t z [2n,2n+2], zgodnego z wysokością danego bloku.
+  Pozostawiono kolejność z wykładu, w której przykłady poprzedzają
+  dowód twierdzenia o całce Riemanna.
+
+### Zmiana okładki
+
+Na polecenie użytkownika narzędziem ImageGen edytowano lewy górny
+dymek mędrca. Zastąpiono jego całą zawartość zdaniem „Wyjątkowo
+zadał Pan dobre pytanie...”. Zaktualizowano tekstowy odpowiednik
+napisów w PDF. Ilustracja jest zapisana jako `grafika/okladka-kreskowkowa.png`.
+Prompt dotyczył zastąpienia treści tego jednego dymka podanym
+zdaniem, z zachowaniem pozostałej kompozycji i napisów.

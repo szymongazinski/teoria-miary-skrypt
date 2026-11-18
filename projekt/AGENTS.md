@@ -51,8 +51,8 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
 - Pierwszą stronę obu wariantów stanowi wspólna graficzna okładka
   `grafika/okladka.pdf`, składana z `grafika/okladka.tex` i gotowej ilustracji
   `grafika/okladka-kreskowkowa.png`. Postać patrzy w górę; napis
-  „PRAWDZIWE σ-CIAŁO” jest wielkimi literami na cokole. Aksjomat wyboru
-  ilustruje wybór jednego kwiatu z każdej donicy, z wielokropkiem.
+  „PRAWDZIWE σ-CIAŁO” jest wielkimi literami na cokole. Mędrzec
+  w granatowej szacie mówi „Wyjątkowo zadał Pan dobre pytanie...”.
   Po okładce umieszczaj stronę
   z tytułem „Teoria miary” i informacją właściwą dla wariantu, przed spisem treści.
 - W repozytorium przechowuj wyłącznie zatwierdzoną okładkę. Podglądy

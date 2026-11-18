@@ -70,11 +70,23 @@ nie wprowadzają dodatkowych przykładów z zadanymi wzorami.
 
 ## Okładka
 
-- `okladka-kreskowkowa.png` - zatwierdzona ilustracja: postać patrząca
-  w górę, napis „PRAWDZIWE σ-CIAŁO” na cokole oraz wybór jednego kwiatu
-  z każdej donicy. Wielokropki oznaczają kontynuację rodziny i wyborów.
+- `okladka-kreskowkowa.png` - ilustracja z postacią patrzącą w górę
+  i napisem „PRAWDZIWE σ-CIAŁO” na cokole. Na polecenie użytkownika
+  wypowiedź mędrca w granatowej szacie została zastąpiona tekstem
+  „Wyjątkowo zadał Pan dobre pytanie...”.
 - `okladka.tex` i `okladka.pdf` - wspólna okładka A4 obu wariantów skryptu,
   osadzająca zatwierdzony obraz wraz z tekstowym odpowiednikiem napisów.
 
 Przebudowa przez `kompiluj.ps1` zachowuje ilustrację.
 Repozytorium wraz z okładką jest publiczne.
+
+## Wykład 11
+
+- `miara-atomowa-dwupunktowa.tex` - zbiór A oraz dwa punkty
+  o wagach 1 i 2 z IMG_7169.
+- `calka-miara-liczaca.tex` - wykres funkcji na zbiorze liczb
+  naturalnych i jej obcięcia z IMG_7170.
+- `calka-schodkowa-niewlasciwa.tex` - naprzemienne bloki
+  o malejących wysokościach z IMG_7173 i IMG_7174.
+- `sumy-darboux.tex` - funkcje schodkowe z sum Darboux
+  z IMG_7174–IMG_7176.
