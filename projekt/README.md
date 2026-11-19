@@ -102,6 +102,10 @@ Wykład 11 obejmuje sekcje 4.13–4.16. Dotyczy całki po zbiorze miary zero,
 równości prawie wszędzie, miar atomowych, sum miar, miary liczącej
 oraz związku całek Riemanna i Lebesgue'a z przykładami.
 Powtórzone zdjęcie etapu drugiego uwzględniono tylko raz.
+Wykład 12 obejmuje sekcje 4.17–4.20: całkę a granicę, dowód twierdzenia
+o zbieżności monotonicznej, całkowanie szeregów funkcji nieujemnych,
+zamianę kolejności sumowania i lemat Fatou z przykładami.
+W powtórzonych zdjęciach tablicy przyjęto późniejsze poprawki.
 
 W obu wariantach przed sekcją 2.8 znajduje się nienumerowany znacznik
 „Limbo”. Drugi znacznik „Limbo” zamyka ten fragment po dowodzie braku

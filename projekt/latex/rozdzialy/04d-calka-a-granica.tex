@@ -1,0 +1,347 @@
+\poczatekwykladu{12}
+
+\section{Całka a granica}
+\label{sec:calka-a-granica}
+
+Pracujemy na przestrzeni z miarą $(X,\mathcal F,\mu)$. Przypomnijmy,
+że dla funkcji mierzalnych $f_n$ i $f$ zbieżność $f_n\to f$
+$\mu$-prawie wszędzie oznacza
+\[
+  \mu(X\setminus E)=0,\qquad
+  E=\left\{x\in X:\lim_{n\to\infty}f_n(x)=f(x)\right\}.
+\]
+Zbiór $E$ jest mierzalny. Mówimy wtedy, że $E$ jest zbiorem
+\emph{miary pełnej}. Warunek ten implikuje $\mu(E)=\mu(X)$,
+ale przy $\mu(X)=+\infty$ sama równość miar nie wystarcza
+do stwierdzenia, że $E$ ma miarę pełną.
+
+\begin{przyklad}[Granica punktowa a granica prawie wszędzie]
+\label{prz:potegi-zbieznosc-prawie-wszedzie}
+Na $[0,1]$ z miarą Lebesgue'a rozważmy $f_n(x)=x^n$. Wówczas
+\[
+  \lim_{n\to\infty}f_n(x)=f(x)=
+  \begin{cases}
+    0,&0\leq x<1,\\
+    1,&x=1.
+  \end{cases}
+\]
+Jeżeli $g\equiv0$ na $[0,1]$, to także $f_n\to g$
+$\lambda$-prawie wszędzie, ponieważ $f$ i $g$ różnią się tylko
+na singletonie $\{1\}$ miary zero.
+\end{przyklad}
+
+\section{Zbieżność monotoniczna: dowód}
+\label{sec:dowod-zbieznosci-monotonicznej}
+
+Wracamy do twierdzenia~\ref{tw:zbieznosc-monotoniczna}
+Lebesgue'a o zbieżności monotonicznej (Beppo Levi). Dla mierzalnych
+funkcji nieujemnych $f_n$ i $f$, przy $f_n\uparrow f$ prawie wszędzie,
+zachodzi
+\[
+  \lim_{n\to\infty}\int_X f_n\,d\mu=\int_X f\,d\mu.
+\]
+Przed dowodem zobaczmy, dlaczego nie można pominąć warunku
+monotoniczności ani zastąpić ciągu niemalejącego malejącym.
+
+\begin{przyklad}[Przesuwający się przedział]
+\label{prz:przesuwajacy-sie-przedzial}
+Na $(\R,\mathcal L,\lambda)$ niech $f_n=\mathbf{1}_{[n,n+1]}$.
+Dla każdego ustalonego $x\in\R$ mamy $f_n(x)=0$ od pewnego miejsca,
+zatem $f_n\to0$ punktowo. Jednak
+\[
+  \int_\R\lim_{n\to\infty}f_n\,d\lambda=0,
+  \qquad
+  \lim_{n\to\infty}\int_\R f_n\,d\lambda=1.
+\]
+Przejście z granicą pod znak całki nie jest więc zawsze możliwe.
+\end{przyklad}
+
+\begin{przyklad}[Malejący ciąg na przestrzeni nieskończonej miary]
+\label{prz:malejace-stale}
+Na $(\R,\mathcal L,\lambda)$ niech $f_n(x)=1/n$ dla każdego $x$.
+Mamy $f_n\downarrow0$ wszędzie, ale
+\[
+  \int_\R f_n\,d\lambda=+\infty\quad\text{dla każdego }n,
+  \qquad
+  \int_\R\lim_{n\to\infty}f_n\,d\lambda=0.
+\]
+Wniosek twierdzenia o zbieżności monotonicznej nie zachodzi zatem
+dla dowolnego malejącego ciągu funkcji nieujemnych.
+\end{przyklad}
+
+Oba zjawiska przedstawia rysunek~\ref{fig:granica-calka-kontrprzyklady}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.98\textwidth]{granica-calka-kontrprzyklady.pdf}
+  \caption{Przedział o stałym polu przesuwa się w prawo. W drugim przykładzie wysokości maleją do zera, lecz każda dodatnia stała ma na $\R$ całkę nieskończoną.}
+  \label{fig:granica-calka-kontrprzyklady}
+\end{figure}
+
+\begin{proof}[Dowód twierdzenia~\ref{tw:zbieznosc-monotoniczna}]
+Najpierw zakładamy $f_n\uparrow f$ w każdym punkcie $X$.
+Z monotoniczności całki ciąg $\bigl(\int_X f_n\,d\mu\bigr)$ jest
+niemalejący. Istnieje więc jego granica
+\[
+  L=\lim_{n\to\infty}\int_X f_n\,d\mu\in[0,+\infty].
+\]
+Ponieważ $f_n\leq f$, mamy $\int_X f_n\,d\mu\leq\int_X f\,d\mu$,
+a po przejściu do granicy
+\[
+  L\leq\int_X f\,d\mu.
+\]
+
+Aby uzyskać przeciwną nierówność, korzystamy z definicji
+\eqref{eq:calka-nieujemnej-supremum}. Wystarczy pokazać, że
+$\int_X s\,d\mu\leq L$ dla każdej funkcji $s\in\mathrm{PMN}$
+takiej, że $s\leq f$. Ustalmy taką funkcję $s$ oraz liczbę
+$\alpha\in(0,1)$. Kładziemy
+\begin{equation}
+  B_n=\{x\in X:f_n(x)\geq\alpha s(x)\}.
+  \label{eq:zbiory-progu-alpha}
+\end{equation}
+Zbiory $B_n$ są mierzalne, a z nierówności $f_n\leq f_{n+1}$
+wynika $B_n\subseteq B_{n+1}$.
+
+Pokażmy, że $\bigcup_{n=1}^\infty B_n=X$. Jeśli $s(x)=0$, to
+$x\in B_n$ dla każdego $n$. Jeśli $s(x)>0$, to skończoność
+wartości funkcji prostej i nierówność $s\leq f$ dają
+\[
+  \alpha s(x)<s(x)\leq f(x).
+\]
+Ponieważ $f_n(x)\uparrow f(x)$, od pewnego miejsca
+$f_n(x)\geq\alpha s(x)$. Argument działa również dla $f(x)=+\infty$.
+Schemat przekroczenia progu pokazano na rysunku~\ref{fig:prog-alpha-s}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.78\textwidth]{prog-alpha-s.pdf}
+  \caption{Dla ustalonego $x$ z $s(x)>0$ wyrazy $f_n(x)$ od pewnego miejsca przekraczają próg $\alpha s(x)<f(x)$. Schemat dla skończonego $f(x)$.}
+  \label{fig:prog-alpha-s}
+\end{figure}
+
+Dla dowolnego $A\in\mathcal F$ zachodzi $A\cap B_n\uparrow A$.
+Ciągłość miary z dołu daje zatem
+\begin{equation}
+  \lim_{n\to\infty}\mu(A\cap B_n)=\mu(A).
+  \label{eq:miara-przeciec-z-bn}
+\end{equation}
+Z definicji $B_n$ i nieujemności $f_n$ otrzymujemy
+$f_n\geq\alpha s\mathbf{1}_{B_n}$ na całym $X$. Zapiszmy
+$s=\sum_{i=1}^r a_i\mathbf{1}_{A_i}$, gdzie $a_i\geq0$,
+a $A_i$ są mierzalne. Wtedy
+\begin{align*}
+  \alpha\sum_{i=1}^r a_i\mu(A_i\cap B_n)
+  &=\alpha\int_X s\mathbf{1}_{B_n}\,d\mu\\
+  &\leq\int_X f_n\mathbf{1}_{B_n}\,d\mu
+  \leq\int_X f_n\,d\mu.
+\end{align*}
+Przechodząc z $n$ do nieskończoności i korzystając
+z~\eqref{eq:miara-przeciec-z-bn}, dostajemy
+\[
+  \alpha\int_X s\,d\mu
+  =\lim_{n\to\infty}\alpha\sum_{i=1}^r a_i\mu(A_i\cap B_n)
+  \leq L.
+\]
+Suma jest skończona, a wszystkie składniki są nieujemne, więc
+rachunek pozostaje poprawny również dla wartości $+\infty$.
+Teraz pozwalamy $\alpha\uparrow1$:
+\[
+  \int_X s\,d\mu
+  =\lim_{\alpha\uparrow1}\alpha\int_X s\,d\mu
+  \leq L.
+\]
+Biorąc supremum po $s\in\mathrm{PMN}$, $s\leq f$, uzyskujemy
+$\int_X f\,d\mu\leq L$. Wraz z pierwszą nierównością daje to
+równość~\eqref{eq:zbieznosc-monotoniczna}.
+
+Pozostaje wersja prawie wszędzie. Niech $E\in\mathcal F$ będzie
+zbiorem miary pełnej, na którym $f_n(x)\uparrow f(x)$.
+Definiujemy
+\[
+  \widetilde f_n=f_n\mathbf{1}_E,\qquad
+  \widetilde f=f\mathbf{1}_E.
+\]
+Wówczas $\widetilde f_n\uparrow\widetilde f$ wszędzie: na $E$
+wynika to z założenia, a poza $E$ wszystkie funkcje są zerowe.
+Są one mierzalne i nieujemne. Ponadto
+\[
+  \int_X f\,d\mu=\int_X\widetilde f\,d\mu,
+  \qquad
+  \int_X f_n\,d\mu=\int_X\widetilde f_n\,d\mu,
+\]
+ponieważ całki po $X\setminus E$ są zerowe
+(twierdzenie~\ref{tw:calka-po-zbiorze-miary-zero}). Stosując już
+udowodnioną wersję punktową do $\widetilde f_n$, kończymy dowód.
+\end{proof}
+
+\section{Całkowanie szeregów funkcji nieujemnych}
+\label{sec:calkowanie-szeregow-nieujemnych}
+
+\begin{twierdzenie}[O całkowaniu szeregów]
+\label{tw:calkowanie-szeregow-nieujemnych}
+Niech $(f_n)$ będzie ciągiem nieujemnych funkcji mierzalnych na $X$.
+Wtedy
+\begin{equation}
+  \int_X\sum_{n=1}^\infty f_n\,d\mu
+  =\sum_{n=1}^\infty\int_X f_n\,d\mu.
+  \label{eq:calkowanie-szeregow-nieujemnych}
+\end{equation}
+Obie strony mogą być równe $+\infty$.
+\end{twierdzenie}
+
+\begin{proof}
+Sumy częściowe $g_n=\sum_{k=1}^n f_k$ są mierzalne i nieujemne.
+Ponieważ $f_k\geq0$, mamy $g_n\leq g_{n+1}$ oraz punktowo
+\[
+  g_n\uparrow\sum_{k=1}^\infty f_k.
+\]
+Z definicji sumy szeregu o wyrazach nieujemnych, addytywności całki
+dla skończonej sumy i twierdzenia o zbieżności monotonicznej wynika
+\begin{align*}
+  \sum_{n=1}^\infty\int_X f_n\,d\mu
+  &=\lim_{n\to\infty}\sum_{k=1}^n\int_X f_k\,d\mu\\
+  &=\lim_{n\to\infty}\int_X\sum_{k=1}^n f_k\,d\mu
+  =\int_X\sum_{k=1}^\infty f_k\,d\mu.
+\end{align*}
+\end{proof}
+
+\begin{wniosek}[Zamiana kolejności sumowania]
+\label{wn:zamiana-kolejnosci-sum-nieujemnych}
+Jeżeli $a_{m,n}\geq0$ dla $m,n\in\N$, to
+\begin{equation}
+  \sum_{m=1}^\infty\sum_{n=1}^\infty a_{m,n}
+  =\sum_{n=1}^\infty\sum_{m=1}^\infty a_{m,n}.
+  \label{eq:zamiana-kolejnosci-sum-nieujemnych}
+\end{equation}
+\end{wniosek}
+
+\begin{proof}
+Na $(\N,\mathcal P(\N),\eta)$, gdzie $\eta$ jest miarą liczącą,
+kładziemy $f_n(m)=a_{m,n}$. Funkcje $f_n$ są mierzalne i nieujemne.
+Całka względem miary liczącej jest sumą wartości funkcji
+(przykład~\ref{prz:calka-miara-liczaca}). Stąd i z twierdzenia
+\ref{tw:calkowanie-szeregow-nieujemnych} otrzymujemy
+\begin{align*}
+  \sum_{m=1}^\infty\sum_{n=1}^\infty a_{m,n}
+  &=\int_\N\sum_{n=1}^\infty f_n\,d\eta\\
+  &=\sum_{n=1}^\infty\int_\N f_n\,d\eta
+  =\sum_{n=1}^\infty\sum_{m=1}^\infty a_{m,n}.
+\end{align*}
+\end{proof}
+
+\section{Lemat Fatou}
+\label{sec:lemat-fatou}
+
+\begin{lemat}[Fatou]
+\label{lem:fatou}
+Niech $(f_n)$ będzie ciągiem nieujemnych funkcji mierzalnych na $X$.
+Wtedy
+\begin{equation}
+  \int_X\liminf_{n\to\infty}f_n\,d\mu
+  \leq\liminf_{n\to\infty}\int_X f_n\,d\mu.
+  \label{eq:lemat-fatou}
+\end{equation}
+\end{lemat}
+
+\begin{uwaga}[Nierówność ostra i granica górna]
+\label{uw:fatou-nierownosc-ostra}
+Nierówność w lemacie Fatou może być ostra. W przykładzie
+\ref{prz:malejace-stale} dla $f_n\equiv1/n$ na $\R$ jej lewa strona
+jest równa zero, a prawa $+\infty$.
+
+Ten sam przykład wyklucza ogólne oszacowanie
+\[
+  \int_X\limsup_{n\to\infty}f_n\,d\mu
+  \geq\limsup_{n\to\infty}\int_X f_n\,d\mu.
+\]
+Przeciwny kierunek również nie jest zawsze poprawny. Nawet
+na przestrzeni skończonej miary nie musi zachodzić
+\[
+  \int_X\limsup_{n\to\infty}f_n\,d\mu
+  \leq\limsup_{n\to\infty}\int_X f_n\,d\mu.
+\]
+Pokazuje to następny przykład.
+\end{uwaga}
+
+\begin{przyklad}[Wędrujące przedziały dyadyczne]
+\label{prz:wedrujace-przedzialy-dyadyczne}
+Rozważamy $[0,1]$ z miarą Lebesgue'a. Zaczynamy od
+\begin{align*}
+  f_1&=\mathbf{1}_{[0,1/2)},&
+  f_2&=\mathbf{1}_{[1/2,1]},\\
+  f_3&=\mathbf{1}_{[0,1/4)},&
+  f_4&=\mathbf{1}_{[1/4,1/2)},\\
+  f_5&=\mathbf{1}_{[1/2,3/4)},&
+  f_6&=\mathbf{1}_{[3/4,1]}.
+\end{align*}
+Następnie przechodzimy kolejno przez osiem przedziałów długości
+$1/8$, szesnaście przedziałów długości $1/16$ itd.
+W każdym podziale ostatni przedział zawiera punkt $1$.
+
+Dokładniej, dla $k\geq1$ i $j=0,\ldots,2^k-1$ definiujemy
+\[
+  I_{k,j}=
+  \begin{cases}
+    [j2^{-k},(j+1)2^{-k}),&0\leq j<2^k-1,\\
+    [1-2^{-k},1],&j=2^k-1,
+  \end{cases}
+  \qquad f_{2^k-1+j}=\mathbf{1}_{I_{k,j}}.
+\]
+Początek ciągu przedstawia rysunek~\ref{fig:wedrujace-przedzialy-dyadyczne}.
+Całki tworzą ciąg
+\[
+  \frac12,\ \frac12,\
+  \underbrace{\frac14,\ \frac14,\ \frac14,\ \frac14}_{4\text{ wyrazy}},\
+  \underbrace{\frac18,\ldots,\frac18}_{8\text{ wyrazów}},\ldots,
+\]
+więc $\int_{[0,1]}f_n\,d\lambda\to0$.
+Każdy $x\in[0,1]$ należy do dokładnie jednego przedziału
+w każdym podziale. Stąd $f_n(x)=1$ nieskończenie wiele razy,
+a także $f_n(x)=0$ nieskończenie wiele razy. Zatem wszędzie
+\[
+  \limsup_{n\to\infty}f_n(x)=1,\qquad
+  \liminf_{n\to\infty}f_n(x)=0.
+\]
+W szczególności
+\[
+  \int_{[0,1]}\limsup_{n\to\infty}f_n\,d\lambda=1
+  >0=\limsup_{n\to\infty}\int_{[0,1]}f_n\,d\lambda.
+\]
+\end{przyklad}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.76\textwidth]{wedrujace-przedzialy-dyadyczne.pdf}
+  \caption{Przedziały, na których kolejne funkcje $f_n$ są równe $1$. Pełna kropka oznacza koniec należący do przedziału, pusta kropka koniec wyłączony.}
+  \label{fig:wedrujace-przedzialy-dyadyczne}
+\end{figure}
+
+\begin{proof}[Dowód lematu~\ref{lem:fatou}]
+Niech
+\[
+  g_n(x)=\inf\{f_n(x),f_{n+1}(x),\ldots\}
+        =\inf_{k\geq n}f_k(x).
+\]
+Każda funkcja $g_n$ jest mierzalna jako infimum przeliczalnej rodziny
+funkcji mierzalnych. Ponadto $g_n\geq0$, $g_n\leq g_{n+1}$,
+$g_n\leq f_n$ i punktowo
+\[
+  \lim_{n\to\infty}g_n
+  =\sup_{n\in\N}\inf_{k\geq n}f_k
+  =\liminf_{n\to\infty}f_n.
+\]
+Z twierdzenia o zbieżności monotonicznej otrzymujemy
+\[
+  \lim_{n\to\infty}\int_X g_n\,d\mu
+  =\int_X\lim_{n\to\infty}g_n\,d\mu
+  =\int_X\liminf_{n\to\infty}f_n\,d\mu.
+\]
+Z drugiej strony $g_n\leq f_n$, więc monotoniczność całki daje
+\[
+  \liminf_{n\to\infty}\int_X f_n\,d\mu
+  \geq\liminf_{n\to\infty}\int_X g_n\,d\mu
+  =\lim_{n\to\infty}\int_X g_n\,d\mu.
+\]
+Po połączeniu obu wzorów otrzymujemy~\eqref{eq:lemat-fatou}.
+\end{proof}

@@ -556,3 +556,46 @@ zadał Pan dobre pytanie...”. Zaktualizowano tekstowy odpowiednik
 napisów w PDF. Ilustracja jest zapisana jako `grafika/okladka-kreskowkowa.png`.
 Prompt dotyczył zastąpienia treści tego jednego dymka podanym
 zdaniem, z zachowaniem pozostałej kompozycji i napisów.
+
+## Wykład 12 – 2026-11-19
+
+W katalogu `2026-11-19/` zachowano trzynaście oryginalnych fotografii
+IMG_7177–IMG_7189. Powtarzające się fragmenty scalono, uwzględniając
+późniejsze poprawki zgodnie z poleceniem użytkownika.
+
+- `IMG_7177.jpeg` - całka a granica, przypomnienie zbieżności prawie
+  wszędzie, zbiór miary pełnej i przykład x^n na [0,1].
+- `IMG_7178.jpeg` i `IMG_7179.jpeg` - przypomnienie twierdzenia
+  o zbieżności monotonicznej, dwa kontrprzykłady i pierwsza nierówność
+  w dowodzie. Nie nadano ponownie numeru twierdzeniu z wykładu 10.
+- `IMG_7180.jpeg` i `IMG_7181.jpeg` - funkcja prosta s pod f,
+  próg alpha*s, rosnące zbiory B_n i ciągłość miary z dołu.
+- `IMG_7182.jpeg`, `IMG_7183.jpeg` i `IMG_7184.jpeg` - zakończenie
+  dowodu i wersja prawie wszędzie. W końcowym porównaniu całki s
+  z granicą całek f_n przyjęto poprawione „≤” z IMG_7183 i IMG_7184,
+  zastępujące wcześniejszy znak równości z IMG_7182.
+- `IMG_7185.jpeg` - twierdzenie o całkowaniu szeregów nieujemnych
+  i dowód przez sumy częściowe.
+- `IMG_7186.jpeg` - zamiana kolejności sum nieujemnych i dowód
+  przez całkę względem miary liczącej na N.
+- `IMG_7187.jpeg` - lemat Fatou i uwagi o ostrości nierówności.
+- `IMG_7188.jpeg` - wędrujące przedziały dyadyczne, zanik całek
+  i granica górna równa 1 w każdym punkcie.
+- `IMG_7189.jpeg` - dowód lematu Fatou przez infima ogonów ciągu.
+
+### Doprecyzowania matematyczne
+
+- W dowodzie Beppo Leviego uzasadniono przekroczenie progu alpha*s(x),
+  gdzie s(x) jest skończone. Nie użyto pomocniczego stwierdzenia
+  f_n(x) >= alpha*f(x) z IMG_7180, które bez dalszych założeń
+  nie jest prawdziwe dla f(x)=+infinity. Osobno wskazano s(x)=0.
+- Wersję prawie wszędzie zapisano przez wyzerowanie funkcji poza
+  wspólnym mierzalnym zbiorem miary pełnej; przy nieskończonej mierze
+  pełna miara oznacza miarę dopełnienia równą zero.
+- W przykładzie dyadycznym ostatni przedział każdego podziału
+  zawiera punkt 1, zgodnie z zapisem na tablicy. Podano ogólny indeks
+  f_(2^k-1+j), aby jednoznacznie określić cały ciąg i jego końce.
+- Zachowano kolejność: sformułowanie lematu Fatou, uwagi i przykład,
+  następnie dowód. Przykład stałych 1/n przywołano odsyłaczem.
+- Odtworzono rysunki przesuwającego się przedziału, malejących stałych,
+  przekroczenia progu oraz przedziałów dyadycznych w osobnych źródłach TikZ.
