@@ -32,7 +32,8 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
 - Wykład 8 zaczyna się od kontynuacji dowodu twierdzenia o działaniach
   w sekcji 3.3: suma, różnica, iloczyn i iloraz. Dalej obejmuje sekcje
   3.4–3.6: kresy i granice, funkcje borelowskie i złożenia, prawie wszędzie.
-  Nagłówek „Całka Lebesgue'a” z IMG_7086 rozpoczyna rozdział 4.
+  Nagłówek „Całka Lebesgue'a” z IMG_7086 rozpoczyna rozdział 4
+  „Całka Lebesgue'a - konstrukcja”.
   Wykład kończy się definicją całki mierzalnej funkcji prostej w postaci
   kanonicznej i równością całki funkcji charakterystycznej z miarą zbioru.
 - Wykład 9 kontynuuje rozdział 4 w sekcjach 4.4–4.7: niezależność całki
@@ -41,10 +42,12 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
   PMN oznacza funkcje proste mierzalne nieujemne, MN funkcje mierzalne
   nieujemne. Twierdzenie o addytywności na etapie drugim jest na tablicy
   sformułowane bez dowodu; nie dopisuj tu dalszych twierdzeń z teorii całki.
-- W obu wariantach umieszczaj nienumerowany znacznik „Limbo” przed sekcją
-  2.8 i drugi, o tym samym brzmieniu, po dowodzie braku przeliczalnej
-  addytywności lambda* na P(R). Oba mają własne wpisy w spisie treści.
-  Znaczniki Limbo pozostają widoczne także bez chronologii wykładów.
+- Rozdział 4 „Całka Lebesgue'a - konstrukcja” kończy się sekcją 4.11
+  „Całka funkcji mierzalnej: etap trzeci”, wraz z jej definicjami i dowodami.
+  Rozdział 5 „Całka Lebesgue'a - własności” zaczyna się sekcją
+  „Własności całki funkcji całkowalnej”. Liczniki elementów matematycznych
+  resetują się na początku rozdziału 5 zgodnie z ogólną regułą.
+- Nie przywracaj usuniętych znaczników „Limbo” ani ich wpisów w spisie treści.
 - Zachowuj PL Roman 12 pt, klasyczny skład oraz czarne, klikalne odnośniki.
 - Stosuj `\pagestyle{plain}`: numery stron wyśrodkowane na dole,
   bez nagłówków z nazwami rozdziałów.

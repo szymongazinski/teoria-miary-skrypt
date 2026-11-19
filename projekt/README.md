@@ -65,10 +65,15 @@ Buduj przez `kompiluj.ps1`, aby zaktualizować oba pliki.
 - Rozdział 3 „Funkcje mierzalne”: równoważne warunki mierzalności,
   przeciwobrazy przedziałów i zbiorów borelowskich, działania i granice
   funkcji, funkcje borelowskie, złożenia oraz równość prawie wszędzie.
-- Rozdział 4 „Całka Lebesgue'a”: funkcje charakterystyczne, funkcje proste,
+- Rozdział 4 „Całka Lebesgue'a - konstrukcja”: funkcje charakterystyczne, funkcje proste,
   postać kanoniczna, niezależność całki od przedstawienia, własności całki
   funkcji prostej, całka po zbiorze, zbieżność monotoniczna, a także
-  całka i całkowalność funkcji obu znaków.
+  całka i całkowalność funkcji obu znaków. Ostatnią sekcją jest
+  4.11 „Całka funkcji mierzalnej: etap trzeci”.
+- Rozdział 5 „Całka Lebesgue'a - własności”: własności całki funkcji
+  całkowalnej, całka po zbiorze miary zero, równość prawie wszędzie,
+  przykłady miar, związek z całką Riemanna, całka a granica,
+  całkowanie szeregów i lemat Fatou (sekcje 5.1–5.9).
 
 Podział obowiązuje w obu wariantach. Wykład 1 obejmuje także początek
 rozdziału 1; Wykład 2 zaczyna się przy własnościach sigma-ciał.
@@ -94,23 +99,18 @@ Wykład 9 pozostaje w rozdziale 4 (sekcje 4.4–4.7). Zaczyna się dowodem
 niezależności całki funkcji prostej od zapisu. Dalej obejmuje własności
 tej całki, całkowanie po zbiorze i definicję całki mierzalnej funkcji
 nieujemnej jako supremum całek funkcji prostych leżących pod nią.
-Wykład 10 obejmuje sekcje 4.8–4.12. Zaczyna się przybliżaniem od dołu
+Wykład 10 obejmuje sekcje 4.8–4.11 i 5.1. Zaczyna się przybliżaniem od dołu
 przez funkcje proste, a następnie obejmuje twierdzenie o zbieżności
 monotonicznej, dowód addytywności całki funkcji nieujemnej i całkę
 funkcji mierzalnej przez jej części dodatnią i ujemną.
-Wykład 11 obejmuje sekcje 4.13–4.16. Dotyczy całki po zbiorze miary zero,
+Wykład 11 obejmuje sekcje 5.2–5.5. Dotyczy całki po zbiorze miary zero,
 równości prawie wszędzie, miar atomowych, sum miar, miary liczącej
 oraz związku całek Riemanna i Lebesgue'a z przykładami.
 Powtórzone zdjęcie etapu drugiego uwzględniono tylko raz.
-Wykład 12 obejmuje sekcje 4.17–4.20: całkę a granicę, dowód twierdzenia
+Wykład 12 obejmuje sekcje 5.6–5.9: całkę a granicę, dowód twierdzenia
 o zbieżności monotonicznej, całkowanie szeregów funkcji nieujemnych,
 zamianę kolejności sumowania i lemat Fatou z przykładami.
 W powtórzonych zdjęciach tablicy przyjęto późniejsze poprawki.
-
-W obu wariantach przed sekcją 2.8 znajduje się nienumerowany znacznik
-„Limbo”. Drugi znacznik „Limbo” zamyka ten fragment po dowodzie braku
-przeliczalnej addytywności lambda* na P(R). Oba znaczniki są widoczne
-w dokumencie i w klikalnym spisie treści, niezależnie od chronologii.
 
 ## Podział na wykłady
 

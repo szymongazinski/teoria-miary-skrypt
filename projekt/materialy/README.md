@@ -599,3 +599,18 @@ późniejsze poprawki zgodnie z poleceniem użytkownika.
   następnie dowód. Przykład stałych 1/n przywołano odsyłaczem.
 - Odtworzono rysunki przesuwającego się przedziału, malejących stałych,
   przekroczenia progu oraz przedziałów dyadycznych w osobnych źródłach TikZ.
+
+## Zmiana układu rozdziałów – 2026-11-20
+
+Na polecenie użytkownika usunięto oba znaczniki „Limbo” wraz z wpisami
+w spisach treści. Dotychczasowy rozdział 4 podzielono na:
+
+- 4 „Całka Lebesgue'a - konstrukcja”, kończący się sekcją 4.11
+  „Całka funkcji mierzalnej: etap trzeci”;
+- 5 „Całka Lebesgue'a - własności”, zaczynający się od własności
+  całki funkcji całkowalnej i obejmujący dalszą istniejącą treść.
+
+W rozdziale 5 numeracja sekcji i poszczególnych rodzajów elementów
+zaczyna się od nowa. Zachowano etykiety odsyłaczy, treść matematyczną,
+kolejność tematów i granice wykładów. Powyższe historyczne opisy
+transkrypcji odnoszą się do numeracji obowiązującej przed podziałem.
